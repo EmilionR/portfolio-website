@@ -25,24 +25,6 @@ a, .btn {
     transition: all 300ms ease;
 }
 
-/* -----------------DESKTOP NAV */
-
-nav, .nav-links {
-    display: flex;
-}
-
-nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 16vh;
-}
-
-.nav-links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-}
-
 a {
     color: #000;
     text-decoration: none;
@@ -52,8 +34,41 @@ a {
 a:hover {
     color: #666;
     text-decoration: underline;
-    text-underline-offset: 1rem;
+    text-underline-offset: 0.5rem;
     text-decoration-color: #ddd;
+}
+
+/* -------------------NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 16vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    background-color: #fafafa;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+
+.nav-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-links.open {
+    max-height: 300px;
 }
 
 .logo {
@@ -61,3 +76,50 @@ a:hover {
     cursor: pointer;
 }
 
+.burger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 300ms ease-in-out;
+}
+
+.burger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.burger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.burger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* -------------------MEDUA QUERIES */
+
+@media screen and (min-width: 992px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .nav-links {
+        position: relative;
+        display: flex;
+        font-size: 1.5rem;
+        flex-direction: row;
+        max-height: 100%;
+    }
+
+}
