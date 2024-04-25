@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emil Jädersten Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/1284835d90.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/1284835d90.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav id="nav-wrapper">
-        <a class="logo">Emil Jädersten</a>
-        <div class="burger-icon" onClick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-            <ul class="nav-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </ul>
+      <a class="logo">Emil Jädersten</a>
+      <div class="burger-icon" onClick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
     </nav>
     <section id="hero">
-        <div class="section__pic-container">
-            <img src="./assets/profile_pic.jpg" alt="Picture of Emil">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">
-                Hello! I am
-            </p>
-            <h1 class="title">Emil Jädersten</h1>
-            <p class="section__text__p2">
-                Fuillstack developer
-            </p>
-        </div>
+      <div class="section__pic-container">
+        <img src="./assets/profile_pic.jpg" alt="Picture of Emil" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello! I am</p>
+        <h1 class="title">Emil Jädersten</h1>
+        <p class="section__text__p2">Fullstack developer</p>
         <div class="btn-container">
-            <button class="btn btn-secondary" onclick="window.open('./assets/cv.pdf')">CV</button>
-            <button class="btn btn-primary" onclick="location.href='./#contact'">Contact me</button>
+          <button
+            class="btn btn-secondary"
+            onclick="window.open('./assets/cv.pdf')"
+          >
+            CV
+          </button>
+          <button class="btn btn-primary" onclick="location.href='./#contact'">
+            Contact me
+          </button>
         </div>
         <div id="socials-container">
-            <a href="https://www.linkedin.com/in/emil-jadersten/" target="_blank" aria-label="My LinkedIn profile">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/EmilionR" target="_blank" aria-label="My LinkedIn profile">
-                <i class="fa-brands fa-github"></i>
-            </a>
+          <a
+            href="https://www.linkedin.com/in/emil-jadersten/"
+            target="_blank"
+            aria-label="My LinkedIn profile"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/EmilionR"
+            target="_blank"
+            aria-label="My LinkedIn profile"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
+      </div>
     </section>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

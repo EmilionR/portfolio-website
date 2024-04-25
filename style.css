@@ -1,6 +1,6 @@
-/* -------------------GENERAL STYLING */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* -------------------GENERAL STYLING */
 
 * {
     margin: 0;
@@ -38,9 +38,40 @@ a:hover {
     text-decoration-color: #ddd;
 }
 
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+}
+
+.btn-primary,
+.btn-secondary {
+    border: #444 0.1rem solid;
+}
+
+.btn-primary,
+.btn-secondary:hover {
+    background-color: #444;
+    color: #fafafa;
+}
+
+.btn-secondary,
+.btn-primary:hover {
+    background-color: #fafafa;
+    color: #444;
+}
+
 i {
     font-size: 2rem;
     cursor: pointer;
+    padding: 1rem;
 }
 
 /* -------------------NAVIGATION */
@@ -122,10 +153,6 @@ section {
     min-height: fit-content;
 }
 
-.section-container {
-    display: flex;
-}
-
 /* --------------------HERO SECTION */
 
 #hero {
@@ -133,6 +160,7 @@ section {
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    flex-wrap: wrap;
 }
 
 .section__pic-container {
@@ -156,9 +184,15 @@ section {
     margin-bottom: 1rem;
 }
 
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
 .title {
     font-size: 3rem;
     text-align: center;
+    white-space: nowrap;
 }
 
 .socials-container {
@@ -168,10 +202,16 @@ section {
     gap: 1rem;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 /* -------------------MEDUA QUERIES */
 
 @media screen and (min-width: 992px) {
-    .burger-menu {
+    .burger-icon {
         display: none;
     }
 
