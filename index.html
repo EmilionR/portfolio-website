@@ -11,7 +11,8 @@
     ></script>
   </head>
   <body>
-    <nav id="nav-wrapper">
+    <header>
+      <nav id="nav-wrapper">
       <a class="logo">Emil Jädersten</a>
       <div class="burger-icon" onClick="toggleMenu()">
         <span></span>
@@ -25,6 +26,8 @@
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </ul>
     </nav>
+    </header>
+    <main>
     <section id="hero">
       <div class="section__pic-container">
         <img src="./assets/profile_pic.jpg" alt="Picture of Emil" />
@@ -307,6 +310,16 @@
             </div>
         </div>
     </section>
+    </main>
+    <footer>
+      <div class="footer-links">
+          <a href="#about" onclick="toggleMenu()">About</a>
+          <a href="#experience" onclick="toggleMenu()">Experience</a>
+          <a href="#projects" onclick="toggleMenu()">Projects</a>
+          <a href="#contact" onclick="toggleMenu()">Contact</a>
+      </div>
+      <p>Copyright &#169 2024 Emil Jädersten. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
