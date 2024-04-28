@@ -42,8 +42,8 @@ a:hover {
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
+  padding: 0.5rem;
+  width: 5rem;
   border-radius: 2rem;
 }
 
@@ -109,7 +109,7 @@ nav {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -147,35 +147,33 @@ nav {
 /* ------------------------SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  margin: 0 5%;
   box-sizing: border-box;
+  height: fit-content;
   min-height: fit-content;
   position: relative;
 }
 
 .section-container {
-    display: flex;
-    gap: 4rem;
-    height: 80%;
+  display: block;
+  gap: 2rem;
+  height: 80%;
 }
 
 /* --------------------HERO SECTION */
 
 #hero {
-  display: flex;
+  display: block;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  width: 275px;
+  height: 275px;
+  margin: 0 auto 2rem;
 }
 
 .section__text {
@@ -198,7 +196,7 @@ section {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   white-space: nowrap;
 }
@@ -220,8 +218,12 @@ section {
 
 .about-containers {
   gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+
+#about .about-containers {
+  padding: 3rem 1.5rem;
 }
 
 .about-details-container {
@@ -234,20 +236,31 @@ section {
   display: flex;
 }
 
+#about .section__pic-container {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  justify-content: center;
+}
+
 .about-pic {
   border-radius: 2rem;
 }
 
+.text-container {
+  padding: 0 3rem 3rem;
+}
+
 .arrow {
+  display: none;
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 0.5rem;
   flex: 1;
-  background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
@@ -257,68 +270,86 @@ section {
 /* ---------------EXPERIENCE SECTION */
 
 .experience-subtitle {
-    color: #444;
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+  color: #444;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .experience-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
 }
 
 .article-container {
-    display: flex;
-    text-align: initial;
-    flex-flow: row wrap;
-    gap: 2.5rem;
-    justify-content: space-around;
+  display: flex;
+  text-align: initial;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  max-height: 40%;
 }
 
 article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  font-size: 1rem;
 }
 
 article i {
-    cursor: default;
+  cursor: default;
+}
+
+.fa-circle-check {
+  padding: 0.5rem;
 }
 
 /* ----------------PROJECTS SECTION */
 
-.color-container {
-    border-color: #888;
-    background-color: #fafafa;
+.project-containers {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  overflow-x: auto;
+}
+
+.project-container {
+  border-color: #888;
+  background-color: #fafafa;
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  height: fit-content;
 }
 
 .project-img {
-    width: 90%;
-    height: 90%;
-    border-radius: 2rem;
+  width: 90%;
+  height: 80%;
+  border-radius: 2rem;
 }
 
 .project-title {
-    margin: 1rem;
-    color: #000;
+  margin: 1rem;
+  color: #000;
 }
 
 .project-btn {
-    color: #000;
-    border-color: #888;
+  color: #000;
+  border-color: #888;
 }
 
 /* CONTACT SECTION */
 
 #contact {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 40vh;
+  margin-top: 2rem;
 }
 
 .contact-info-upper-container {
@@ -336,11 +367,11 @@ article i {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1rem;
+  margin: 0;
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: 1rem;
   vertical-align: middle;
 }
 
@@ -351,17 +382,20 @@ article i {
 /* --------------------------FOOTER */
 
 footer {
-  height: auto;
+  height: 40vh;
   margin: 0 auto;
   padding-bottom: 2rem;
 }
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  height: fit-content;
+  margin-bottom: 2rem;
   justify-content: center;
   font-size: 1.5rem;
-  gap: 1rem;
+  gap: 0.5rem;
   padding-bottom: 1rem;
 }
 
@@ -370,6 +404,57 @@ footer > p {
 }
 
 /* -------------------MEDIA QUERIES */
+
+@media screen and (min-width: 687px) {
+  .btn {
+    padding: 1rem;
+    width: 8rem;
+  }
+
+  section {
+    margin: 2rem 10rem;
+    height: 96vh;
+    padding-top: 4vh;
+  }
+
+  #contact {
+    height: 70vh;
+  }
+  footer {
+    height: auto;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: nowrap;
+  }
+
+  .contact-info-container {
+    margin: 1rem;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: larger;
+  }
+
+  .experience-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .footer-links {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .burger-icon {
@@ -382,5 +467,67 @@ footer > p {
     font-size: 1.5rem;
     flex-direction: row;
     max-height: 100%;
+  }
+
+  .details-container {
+    padding: 1.5rem;
+  }
+
+  .article-container {
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+
+  article {
+    width: 10rem;
+  }
+
+  .arrow {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero,
+  .section-container {
+    display: flex;
+  }
+
+  #about .section-container {
+    flex-direction: column;
+  }
+
+  .arrow {
+    right: 5rem;
+  }
+
+  section,
+  .section-container {
+    height: 83vh;
+  }
+
+  section {
+    margin: 0 2rem;
+  }
+
+  .section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+  }
+
+  .about-containers {
+    margin-top: 2rem;
+  }
+
+  .project-container {
+    flex-shrink: 1;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #hero {
+    height: 96vh;
+    margin-bottom: 1rem;
   }
 }
