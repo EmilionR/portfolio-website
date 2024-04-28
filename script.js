@@ -18,7 +18,7 @@ const updateArrowsVisibility = () => {
 
     const distanceFromBottom = pageHeight - (scrollPosition + windowHeight);
 
-    if (scrollPosition > 500) {
+    if (scrollPosition > 450) {
         upArrow.style.display = "block";
     } else {
         upArrow.style.display = "none";
@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
 upArrow.addEventListener('click', () => {
     Array.from(sections).reverse().forEach(section => {
         const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
+        if (rect.top <= window.innerHeight && rect.bottom > 0) {
             section.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
     });
