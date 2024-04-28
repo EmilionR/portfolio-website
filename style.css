@@ -251,11 +251,16 @@ section {
   padding: 0 3rem 3rem;
 }
 
-.arrow {
+#up-arrow,
+#down-arrow {
   display: none;
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+
+#up-arrow {
+  bottom: 20%;
 }
 
 .details-container {
@@ -482,11 +487,6 @@ footer > p {
     width: 10rem;
   }
 
-  .arrow {
-    display: inline;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   #hero,
   .section-container {
@@ -495,10 +495,6 @@ footer > p {
 
   #about .section-container {
     flex-direction: column;
-  }
-
-  .arrow {
-    right: 5rem;
   }
 
   section,
