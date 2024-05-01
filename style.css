@@ -6,8 +6,8 @@
   --clr-dark-grey: #444;
   --clr-grey: #888;
   --clr-light-grey: #ccc;
-  --clr-primary: #8888dd;
-  --clr-secondary: #ff8c00;
+  --clr-primary: #7209b7;
+  --clr-secondary: #4361ee;
 }
 
 /* -------------------GENERAL STYLING */
@@ -42,24 +42,27 @@ a,
 }
 
 a {
-  color: #000;
+  color: var(--clr-black);
   text-decoration: none;
   text-decoration-color: var(--clr-white);
 }
 
 a:hover {
-  color: #666;
+  color: var(--clr-grey);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-color: var(--clr-light-grey);
+  text-decoration-thickness: 0.3rem;
 }
 
 .btn {
   font-weight: 600;
+  font-size: 1rem;
   transition: all 300ms ease;
   padding: 0.5rem;
   width: 5rem;
   border-radius: 2rem;
+  position: relative;
 }
 
 .btn:hover,
@@ -70,18 +73,36 @@ a:hover {
 .btn-primary,
 .btn-secondary {
   border: 0.1rem solid var(--clr-dark-grey);
-}
-
-.btn-primary,
-.btn-secondary:hover {
-  background-color: var(--clr-dark-grey);
   color: var(--clr-white);
+  box-shadow: 4px 4px 10px var(--clr-dark-grey);
 }
 
-.btn-secondary,
-.btn-primary:hover {
-  background-color: var(--clr-white);
-  color: var(--clr-dark-grey);
+.btn-primary:after,
+.btn-secondary:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 8px;
+	width:calc(100% - 16px);
+	height: 40%;
+	background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+  border-radius: 2rem;
+}
+
+.btn-primary {
+  background: linear-gradient(350deg, var(--clr-primary) 0%, var(--clr-secondary) 90%);
+}
+
+.btn-secondary {
+  background: linear-gradient(200deg, var(--clr-primary) 0%, var(--clr-secondary) 90%);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  opacity: 0.8;
+  color: var(--clr-black);
 }
 
 i {
@@ -94,13 +115,14 @@ i {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 16vh;
+  gap: 2rem;
+  padding: 5%;
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   flex-direction: column;
   position: absolute;
@@ -110,12 +132,17 @@ nav {
   max-height: 0;
   overflow: hidden;
   transition: all 300ms ease-in-out;
+  align-items: center;
 }
 
 .nav-links a {
   display: block;
   padding: 10px;
   text-align: center;
+}
+
+.nav-links a:hover {
+  text-decoration-color: rgba(200, 100, 200, 0.8);
 }
 
 .nav-links.open {
@@ -125,6 +152,47 @@ nav {
 .logo {
   font-size: 1.5rem;
   cursor: pointer;
+  font-weight: 800;
+  white-space: nowrap;
+  max-height: 100%;
+  position: relative;
+  color: var(--clr-primary);
+  opacity: 0.9;
+}
+
+.logo:after {
+  position: absolute;
+  content: "Emil Jädersten";
+  color: var(--clr-secondary);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  filter: blur(2px);
+  opacity: 0.75;
+  transition: all 300ms ease;
+}
+
+.logo:before {
+  position: absolute;
+  content: "Emil Jädersten";
+  color: var(--clr-black);
+  left: 0;
+  top: 0;
+  transition: all 300ms ease;
+}
+
+.logo:hover {
+  color: var(--clr-primary);
+}
+
+.logo:hover::before {
+  top: 20%;
+  left: 2%;
+}
+
+.logo:hover::after {
+  top: -20%;
+  left: -2%;
 }
 
 .burger-menu {
@@ -400,7 +468,6 @@ article i {
 /* --------------------------FOOTER */
 
 footer {
-  height: 40vh;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -490,6 +557,8 @@ footer > p {
     font-size: 1.5rem;
     flex-direction: row;
     max-height: 100%;
+    align-items: center;
+    right: 0;
   }
 
   .details-container {
@@ -507,6 +576,11 @@ footer > p {
 }
 
 @media screen and (min-width: 1200px) {
+
+  .logo {
+    font-size: 3rem;
+  }
+
   #hero,
   .section-container {
     display: flex;
