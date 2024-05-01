@@ -3,6 +3,18 @@ const upArrow = document.getElementById("up-arrow");
 const downArrow = document.getElementById("down-arrow");
 const arrowsMinWidth = 687;
 
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+
 // Toggle Navbar Menu
 function toggleMenu() {
   const menu = document.querySelector(".nav-links");

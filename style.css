@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --clr-white: #fafafa;
+  --clr-black: #000;
+  --clr-dark-grey: #444;
+  --clr-grey: #888;
+  --clr-light-grey: #ccc;
+  --clr-primary: #8888dd;
+  --clr-secondary: #ff8c00;
+}
+
 /* -------------------GENERAL STYLING */
 
 * {
   margin: 0;
   padding: 0;
+  /* outline: 1px solid #f00 !important; */
 }
 
 html {
@@ -16,7 +27,11 @@ body {
 }
 
 p {
-  color: #444;
+  color: var(--clr-dark-grey);
+}
+
+header: {
+  width: 100%;
 }
 
 /* -----------------LINKS & BUTTONS */
@@ -29,14 +44,14 @@ a,
 a {
   color: #000;
   text-decoration: none;
-  text-decoration-color: #fafafa;
+  text-decoration-color: var(--clr-white);
 }
 
 a:hover {
   color: #666;
   text-decoration: underline;
   text-underline-offset: 0.5rem;
-  text-decoration-color: #ccc;
+  text-decoration-color: var(--clr-light-grey);
 }
 
 .btn {
@@ -54,19 +69,19 @@ a:hover {
 
 .btn-primary,
 .btn-secondary {
-  border: #444 0.1rem solid;
+  border: 0.1rem solid var(--clr-dark-grey);
 }
 
 .btn-primary,
 .btn-secondary:hover {
-  background-color: #444;
-  color: #fafafa;
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-white);
 }
 
 .btn-secondary,
 .btn-primary:hover {
-  background-color: #fafafa;
-  color: #444;
+  background-color: var(--clr-white);
+  color: var(--clr-dark-grey);
 }
 
 i {
@@ -129,7 +144,7 @@ nav {
 .burger-icon span {
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: var(--clr-black);
   transition: all 300ms ease-in-out;
 }
 
@@ -146,7 +161,7 @@ nav {
 /* ------------------------SECTIONS */
 
 section {
-  margin: 0 5%;
+  margin: 0 5% 2rem;
   box-sizing: border-box;
   height: fit-content;
   min-height: fit-content;
@@ -267,8 +282,7 @@ section {
   padding: 0.5rem;
   flex: 1;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid var(--clr-dark-grey);
   text-align: center;
 }
 
@@ -320,8 +334,8 @@ article i {
 }
 
 .project-container {
-  border-color: #888;
-  background-color: #fafafa;
+  border-color: var(--clr-grey);
+  background-color: var(--clr-white);
   width: 100%;
   flex-shrink: 0;
   text-align: center;
@@ -336,12 +350,13 @@ article i {
 
 .project-title {
   margin: 1rem;
-  color: #000;
+  color: var(--clr-black);
 }
 
 .project-btn {
-  color: #000;
-  border-color: #888;
+  color: var(--clr-black);
+  border-color: var(--clr-grey);
+  margin-bottom: 1rem;
 }
 
 /* CONTACT SECTION */
@@ -357,8 +372,8 @@ article i {
 .contact-upper-container {
   justify-content: center;
   border-radius: 2rem;
-  border: #444 0.1rem solid;
-  background-color: #fafafa;
+  border: 0.1rem solid var(--clr-dark-grey);
+  background-color: var(--clr-white);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -366,23 +381,27 @@ article i {
 .contact-info-container {
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0;
 }
 
-.contact-info-container p {
-  font-size: 1rem;
-  vertical-align: middle;
+.contact-info-container a {
+  white-space: nowrap;
+  padding: 0.5rem;
+  display: block;
 }
 
 .contact-icon {
   vertical-align: middle;
+  padding: 0.5rem;
 }
 
 /* --------------------------FOOTER */
 
 footer {
   height: 40vh;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 2rem;
 }
@@ -429,7 +448,6 @@ footer > p {
     height: auto;
   }
 
-  .about-wrapper,
   .contact-upper-container,
   .btn-container {
     flex-wrap: nowrap;
@@ -486,6 +504,7 @@ footer > p {
   article {
     width: 10rem;
   }
+}
 
 @media screen and (min-width: 1200px) {
   #hero,
