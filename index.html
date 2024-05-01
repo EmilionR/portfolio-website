@@ -28,15 +28,17 @@
     </nav>
     </header>
     <main>
+      <!--Hero Section-->
     <section id="hero">
-      <div class="section__pic-container">
+      <!--Main Picture-->
+      <div class="container pic-container">
         <img src="./assets/profile_pic.jpg" alt="Picture of Emil" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello! I am</p>
         <h1 class="title">Emil Jädersten</h1>
         <p class="section__text__p2">Fullstack developer</p>
-        <div class="btn-container">
+        <div class="container btn-container">
           <button
             class="btn btn-secondary"
             onclick="window.open('./assets/cv.pdf')"
@@ -47,7 +49,7 @@
             Contact me
           </button>
         </div>
-        <div id="socials-container">
+        <div id="socials container">
           <a
             href="https://www.linkedin.com/in/emil-jadersten/"
             target="_blank"
@@ -66,19 +68,21 @@
       </div>
     </section>
     
+    <!--About Section-->
     <section id="about">
       <p class="section__text__p1">Get to know more</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
+        <div class="container pic-container">
           <img
             src="./assets/profile_pic.jpg"
             alt="Picture of Emil"
             class="about-pic"
           />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
+        <!--About Details-->
+        <div class="about-details container">
+          <div class="container about-wrapper">
             <div class="details-container">
               <i class="fa-solid fa-award"></i>
               <h2>Experience</h2>
@@ -108,14 +112,16 @@
       </div>
     </section>
     
+    <!--Experience Section-->
     <section id="experience">
       <p class="section__text__p1">Explore my</p>
       <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+      <div class="experience-details container">
+        <div class="container about-wrapper">
+          <!--Frontend Experience-->
           <div class="details-container" id="frontend-experience">
             <h2 class="experience-subtitle">Frontend</h2>
-            <div class="article-container">
+            <div class="container article-container">
               <article>
                 <i class="fa-solid fa-circle-check"></i>
                 <div>
@@ -160,9 +166,10 @@
               </article>
             </div>
           </div>
+          <!--Backend Experience-->
           <div class="details-container" id="backend-experience">
             <h2 class="experience-subtitle">Backend</h2>
-            <div class="article-container">
+            <div class="container article-container">
               <article>
                 <i class="fa-solid fa-circle-check"></i>
                 <div>
@@ -204,11 +211,13 @@
       </div>
     </section>
     
+    <!--Projects Section-->
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
-        <div class="project-containers">
+        <div class="container project-wrapper">
+          <!--1st Project-->
         <div class="project-container">
             <img
               src="./assets/project.png"
@@ -216,7 +225,7 @@
               class="project-img"
             />
             <h2 class="experience-subitle project-title">Project 1</h2>
-            <div class="btn-container">
+            <div class="container btn-container">
               <button
                 class="btn btn-secondary project-btn"
                 onclick="location.href='https://github.com/EmilionR/django-pp4'"
@@ -231,6 +240,7 @@
               </button>
             </div>
         </div>
+        <!--2nd Project-->
         <div class="project-container">
             <img
               src="./assets/project.png"
@@ -238,7 +248,7 @@
               class="project-img"
             />
             <h2 class="experience-subitle project-title">Project 2</h2>
-            <div class="btn-container">
+            <div class="container btn-container">
               <button
                 class="btn btn-secondary project-btn"
                 onclick="location.href='https://github.com/EmilionR/django-pp4'"
@@ -253,6 +263,7 @@
               </button>
             </div>
         </div>
+        <!--3rd Project-->
         <div class="project-container">
             <img
               src="./assets/project.png"
@@ -260,7 +271,7 @@
               class="project-img"
             />
             <h2 class="experience-subitle project-title">Project 3</h2>
-            <div class="btn-container">
+            <div class="container btn-container">
               <button
                 class="btn btn-secondary project-btn"
                 onclick="location.href='https://github.com/EmilionR/django-pp4'"
@@ -278,11 +289,12 @@
       </div>
     </section>
     
+    <!--Contact Info-->
     <section id="contact">
         <p class="section__text__p1">Get In Touch</p>
         <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
+        <div class="container contact-upper-container">
+            <div class="container contact-info-container">
               <a
                 href="mailto:emiljadersten@gmail.com"
                 target="_blank"
@@ -312,7 +324,7 @@
       ></i>
     </main>
     <footer>
-      <div class="footer-links">
+      <div class="container footer-links">
           <a href="#about" onclick="toggleMenu()">About</a>
           <a href="#experience" onclick="toggleMenu()">Experience</a>
           <a href="#projects" onclick="toggleMenu()">Projects</a>
