@@ -51,7 +51,7 @@ a:hover {
   color: var(--clr-grey);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
-  text-decoration-color: var(--clr-light-grey);
+  text-decoration-color: rgba(200, 100, 200, 0.8);
   text-decoration-thickness: 0.3rem;
 }
 
@@ -60,7 +60,7 @@ a:hover {
   font-size: 1rem;
   transition: all 300ms ease;
   padding: 0.5rem;
-  width: 5rem;
+  width: 6rem;
   border-radius: 2rem;
   position: relative;
 }
@@ -85,7 +85,7 @@ a:hover {
 	left: 8px;
 	width:calc(100% - 16px);
 	height: 40%;
-	background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+	background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0));
   border-radius: 2rem;
 }
 
@@ -118,7 +118,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 5%;
+  padding: 1.5rem;
 }
 
 .nav-links {
@@ -139,10 +139,6 @@ nav {
   display: block;
   padding: 10px;
   text-align: center;
-}
-
-.nav-links a:hover {
-  text-decoration-color: rgba(200, 100, 200, 0.8);
 }
 
 .nav-links.open {
@@ -310,19 +306,12 @@ section {
   flex-direction: column;
 }
 
-#about .pic-container {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  justify-content: center;
-}
-
 .about-pic {
   border-radius: 2rem;
 }
 
 .text-container {
-  padding: 0 3rem 3rem;
+  padding: 0 3rem 1rem;
 }
 
 #up-arrow,
@@ -422,8 +411,6 @@ article i {
 }
 
 .project-btn {
-  color: var(--clr-black);
-  border-color: var(--clr-grey);
   margin-bottom: 1rem;
 }
 
@@ -504,7 +491,7 @@ footer > p {
 
   section {
     margin: 2rem 10rem;
-    height: 96vh;
+    /* height: 96vh; */
     padding-top: 4vh;
   }
 
