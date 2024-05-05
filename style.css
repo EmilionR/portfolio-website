@@ -30,7 +30,7 @@ p {
   color: var(--clr-dark-grey);
 }
 
-header: {
+header {
   width: 100%;
 }
 
@@ -401,29 +401,16 @@ article i {
 }
 
 .carousel__viewport {
-  position: relative;
   height: 100%;
   display: flex;
-  counter-reset: item;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   list-style: none;
 }
 
 .carousel__slide {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  flex: 0 0 100%;
+  flex: 0 0 auto;
   width: 100%;
-  counter-increment: item;
-  height: 100%;
   list-style: none;
-}
-
-.carousel__slide.active {
-  left: 0;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease;
 }
 
 .project-container {
@@ -472,79 +459,25 @@ article i {
   -ms-overflow-style: none;
 }
 
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-
-.carousel__navigation {
+.slider-btn {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1;
+    border-radius: 12px;
 }
 
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
+.prev {
+  left: 10%;
 }
 
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
-
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
+.next {
+  right: 10%;
 }
 
 /* CONTACT SECTION */
@@ -754,7 +687,7 @@ footer > p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
-    animation-name: none;
+  .carousel__slide {
+    animation: none;
   }
 }
