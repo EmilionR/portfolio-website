@@ -8,6 +8,8 @@
   --clr-light-grey: #ccc;
   --clr-primary: #7209b7;
   --clr-secondary: #4361ee;
+
+  --clr-bg: var(--clr-white);
 }
 
 /* -------------------GENERAL STYLING */
@@ -24,6 +26,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--clr-bg);
 }
 
 p {
@@ -299,14 +302,18 @@ section {
 
 /* -------------------ABOUT SECTION */
 
-.about-wrapper {
+#experience {
+  margin-bottom: 3rem;
+}
+
+.details-wrapper {
   gap: 2rem;
   margin-top: 0;
   flex-wrap: wrap;
 }
 
-#about .about-wrapper {
-  padding: 3rem 1.5rem;
+#about .details-wrapper {
+  padding: 2rem 1.5rem;
 }
 
 .about-details {
@@ -349,25 +356,38 @@ section {
 
 /* ---------------EXPERIENCE SECTION */
 
+#experience .details-wrapper {
+  flex-direction: column;
+  gap: 1rem;
+  overflow-x: hidden;
+}
 .experience-subtitle {
   color: #444;
   font-weight: 600;
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-bottom: -1.5rem;
+  background-color: var(--clr-bg);
+  z-index: 1;
+  width: fit-content;
 }
 
 .experience-details {
   justify-content: center;
   flex-direction: column;
   margin-top: 2rem;
+
 }
 
-.article-container {
+#frontend-experience,
+#backend-experience {
   text-align: initial;
-  flex-flow: row wrap;
-  gap: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
   justify-content: center;
   max-height: 40%;
+  overflow-x: auto;
 }
 
 article {
@@ -379,10 +399,7 @@ article {
 
 article i {
   cursor: default;
-}
-
-.fa-circle-check {
-  padding: 0.5rem;
+  font-size: 3rem;
 }
 
 /* ----------------PROJECTS SECTION */
@@ -657,10 +674,6 @@ footer > p {
     height: 400px;
     width: 400px;
     margin: auto 0;
-  }
-
-  .about-wrapper {
-    margin-top: 2rem;
   }
 
   .project-container {
