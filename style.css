@@ -30,7 +30,8 @@ body {
 }
 
 p {
-  color: var(--clr-dark-grey);
+  color: var(--clr-black);
+  font-weight: 500;
 }
 
 header {
@@ -271,6 +272,7 @@ section {
 
 .section__text p {
   font-weight: 600;
+  color: var(--clr-dark-grey);
 }
 
 .section__text__p1 {
@@ -287,6 +289,21 @@ section {
   font-size: 2rem;
   text-align: center;
   white-space: nowrap;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.title::after {
+  content: "";
+  height: 40px;
+  position: absolute;
+  background-color: var(--clr-secondary);
+  left: -10%;
+  right: -10%;
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(16px);
 }
 
 .socials {
@@ -347,11 +364,12 @@ section {
 }
 
 .details-container {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 2rem;
   flex: 1;
   border-radius: 2rem;
   border: 0.1rem solid var(--clr-dark-grey);
   text-align: center;
+  background-color: var(--clr-light-grey)
 }
 
 /* ---------------EXPERIENCE SECTION */
@@ -397,6 +415,7 @@ article {
   width: 30vw;
   border: 0.1rem solid var(--clr-dark-grey);
   border-radius: 12px;
+  background-color: var(--clr-light-grey);
 }
 
 @media (prefers-reduced-motion: no-preference) {
