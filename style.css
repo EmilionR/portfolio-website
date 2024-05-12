@@ -259,10 +259,11 @@ section {
   flex-wrap: wrap;
 }
 
-.pic-container {
-  width: 275px;
-  height: 275px;
+#profile-pic {
+  width: 200px;
+  height: 200px;
   margin: 0 auto 2rem;
+  border-radius: 50%;
 }
 
 .section__text {
@@ -369,7 +370,7 @@ section {
   border-radius: 2rem;
   border: 0.1rem solid var(--clr-dark-grey);
   text-align: center;
-  background-color: var(--clr-light-grey)
+  background-color: var(--clr-light-grey);
 }
 
 /* ---------------EXPERIENCE SECTION */
@@ -635,6 +636,11 @@ footer > p {
     /* height: 96vh; */
   }
 
+  #profile-pic {
+    width: 400px;
+    height: 400px;
+  }
+
   #contact {
     height: 70vh;
   }
@@ -691,7 +697,6 @@ footer > p {
 }
 
 @media screen and (min-width: 992px) {
-
   section {
     margin: 0 10%;
   }
@@ -738,10 +743,8 @@ footer > p {
     height: 83vh;
   }
 
-  .pic-container {
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+  #profile-pic {
+    margin: 0 2rem;
   }
 
   .project-container {
