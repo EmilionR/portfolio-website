@@ -349,7 +349,11 @@ section {
   position: fixed;
   right: 5%;
   bottom: 5%;
-  opacity: 0.75;
+  background-color: var(--clr-black);
+  border: 0.1rem solid var(--clr-grey);
+  color: var(--clr-white);
+  border-radius: 8px;
+  opacity: 0.5;
   padding: 0.5rem;
 }
 
@@ -361,7 +365,7 @@ section {
 #up-arrow:focus,
 #down-arrow:hover,
 #down-arrow:focus {
-  opacity: 1;
+  opacity: 0.75;
 }
 
 .details-container {
@@ -554,6 +558,7 @@ article {
   cursor: pointer;
   padding: 1rem;
   z-index: 1;
+  border: 0.1rem solid var(--clr-grey);
   border-radius: 12px;
   backdrop-filter: blur(3px);
 }
