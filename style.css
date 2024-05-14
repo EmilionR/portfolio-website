@@ -124,6 +124,45 @@ i {
   padding: 1rem;
 }
 
+.arrow-btn {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  cursor: pointer;
+  z-index: 1;
+  backdrop-filter: blur(3px);
+  border: 0.1rem solid var(--clr-grey);
+  border-radius: 12px;
+  opacity: 0.5;
+}
+
+.arrow-btn:hover,
+.arrow-btn:focus-visible {
+  opacity: 0.8;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;  
+}
+
+#up-arrow,
+#down-arrow {
+  display: none;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  i {
+    padding: 0.5rem;
+    font-size: 1.75rem;
+  }
+}
+
+#up-arrow {
+  bottom: 16%;
+}
+
 /* -------------------NAVIGATION */
 
 nav {
@@ -344,31 +383,6 @@ section {
   padding: 0 3rem 1rem;
 }
 
-#up-arrow,
-#down-arrow {
-  display: none;
-  position: fixed;
-  right: 5%;
-  bottom: 5%;
-  background-color: var(--clr-black);
-  border: 0.1rem solid var(--clr-grey);
-  color: var(--clr-white);
-  border-radius: 8px;
-  opacity: 0.5;
-  padding: 0.5rem;
-}
-
-#up-arrow {
-  bottom: 16%;
-}
-
-#up-arrow:hover,
-#up-arrow:focus,
-#down-arrow:hover,
-#down-arrow:focus {
-  opacity: 0.75;
-}
-
 .details-container {
   padding: 0.5rem 1rem 2rem;
   flex: 1;
@@ -546,21 +560,6 @@ section {
 
 .carousel__viewport {
   -ms-overflow-style: none;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 1rem;
-  z-index: 1;
-  border: 0.1rem solid var(--clr-grey);
-  border-radius: 12px;
-  backdrop-filter: blur(3px);
 }
 
 .prev {
