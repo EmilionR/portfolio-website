@@ -415,7 +415,7 @@ section {
   overflow-x: auto;
 }
 
-article {
+.experience-block {
   padding: 1.5rem;
   font-size: 1rem;
   width: 30vw;
@@ -693,7 +693,7 @@ footer > p {
     text-align: center;
   }
 
-  article {
+  .experience-block {
     width: 20vw;
   }
 
@@ -706,7 +706,7 @@ footer > p {
     --scroll-begin: -900%;
     --scroll-end: 0;
   }
-  article {
+  .experience-block {
     width: 10vw;
   }
 
@@ -743,9 +743,6 @@ footer > p {
     padding: 1.5rem;
   }
 
-  .article-container {
-    gap: 2.5rem;
-  }
 }
 
 @media screen and (min-width: 1200px) {
