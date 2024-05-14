@@ -524,7 +524,7 @@ section {
   position: absolute;
   left: 20%;
   right: 20%;
-  bottom: 5%;
+  bottom: 10%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
 }
@@ -640,11 +640,7 @@ footer > p {
 /* -------------------MEDIA QUERIES */
 
 @media screen and (min-width: 687px) {
-  .btn {
-    padding: 1rem;
-    width: 8rem;
-    font-size: 1rem;
-  }
+  
 
   section {
     /* height: 96vh; */
@@ -717,6 +713,14 @@ footer > p {
     max-width: 100%;
     aspect-ratio: 16/9;
   }
+
+  @media screen and (min-height: 400px) {
+    .btn {
+      padding: 1rem;
+      width: 8rem;
+      font-size: 1rem;
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -787,6 +791,31 @@ footer > p {
     height: 96vh;
     margin-bottom: 1rem;
   }
+}
+
+@media screen and (max-height: 400px) {
+
+  .project-container {
+    height: 100%;
+
+    .btn-container {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .project-img {
+    height: 80%;
+    width: auto;
+  }
+
+  .project-title {
+    margin: 0.5rem auto;
+  }
+
+  #up-arrow {
+    bottom: 22%;
+  }
+
 }
 
 @media (hover: hover) {
