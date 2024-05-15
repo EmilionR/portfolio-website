@@ -29,6 +29,15 @@ body {
   background-color: var(--clr-bg);
 }
 
+h1,
+h2,
+h3,
+.section__text__p1,
+.section__text__p2,
+.nav-links a {
+  letter-spacing: -1px;
+}
+
 p {
   color: var(--clr-black);
   font-weight: 500;
@@ -144,7 +153,7 @@ i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 #up-arrow,
@@ -640,8 +649,6 @@ footer > p {
 /* -------------------MEDIA QUERIES */
 
 @media screen and (min-width: 687px) {
-  
-
   section {
     /* height: 96vh; */
   }
@@ -745,7 +752,6 @@ footer > p {
   .details-container {
     padding: 1.5rem;
   }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -794,7 +800,6 @@ footer > p {
 }
 
 @media screen and (max-height: 400px) {
-
   .project-container {
     height: 100%;
 
@@ -815,7 +820,6 @@ footer > p {
   #up-arrow {
     bottom: 22%;
   }
-
 }
 
 @media (hover: hover) {
