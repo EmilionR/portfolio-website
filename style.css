@@ -10,6 +10,18 @@
   --clr-secondary: #4361ee;
 
   --clr-bg: var(--clr-white);
+  --clr-bg2: var(--clr-light-grey);
+  --clr-text: var(--clr-black);
+  --clr-text2: var(--clr-dark-grey);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {  
+    --clr-bg: var(--clr-black);
+    --clr-bg2: var(--clr-dark-grey);
+    --clr-text: var(--clr-white);
+    --clr-text2: var(--clr-light-grey);
+  }
 }
 
 /* -------------------GENERAL STYLING */
@@ -36,15 +48,20 @@ h3,
 .section__text__p2,
 .nav-links a {
   letter-spacing: -1px;
+  color: var(--clr-text);
 }
 
 p {
-  color: var(--clr-black);
+  color: var(--clr-text);
   font-weight: 500;
 }
 
 header {
   width: 100%;
+}
+
+i {
+  color: var(--clr-text);
 }
 
 /* -----------------LINKS & BUTTONS */
@@ -55,9 +72,9 @@ a,
 }
 
 a {
-  color: var(--clr-black);
+  color: var(--clr-text);
   text-decoration: none;
-  text-decoration-color: var(--clr-white);
+  text-decoration-color: var(--clr-bg);
 }
 
 a:hover {
@@ -86,7 +103,7 @@ a:hover {
 
 .btn-primary,
 .btn-secondary {
-  border: 0.1rem solid var(--clr-dark-grey);
+  border: 0.1rem solid var(--clr-black);
   color: var(--clr-white);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
 }
@@ -179,7 +196,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .nav-links {
@@ -232,7 +249,7 @@ nav {
 .logo:before {
   position: absolute;
   content: "Emil Jädersten";
-  color: var(--clr-black);
+  color: var(--clr-text);
   left: 0;
   top: 0;
   transition: all 300ms ease;
@@ -303,7 +320,6 @@ section {
 
 #hero {
   display: block;
-  height: 90vh;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
@@ -324,7 +340,7 @@ section {
 
 .section__text p {
   font-weight: 600;
-  color: var(--clr-dark-grey);
+  color: var(--clr-text2);
 }
 
 .section__text__p1 {
@@ -396,9 +412,9 @@ section {
   padding: 0.5rem 1rem 2rem;
   flex: 1;
   border-radius: 2rem;
-  border: 0.1rem solid var(--clr-dark-grey);
+  border: 0.1rem solid var(--clr-text2);
   text-align: center;
-  background-color: var(--clr-light-grey);
+  background-color: var(--clr-bg2);
 }
 
 /* ---------------EXPERIENCE SECTION */
@@ -413,7 +429,7 @@ section {
   overflow-x: hidden;
 }
 .experience-subtitle {
-  color: #444;
+  color: var(--clr-text2);
   padding: 0.1rem 0.5rem;
   font-weight: 600;
   font-size: 1.25rem;
@@ -423,7 +439,7 @@ section {
   z-index: 1;
   width: fit-content;
   border-radius: 16px;
-  border: 0.1rem solid var(--clr-dark-grey);
+  border: 0.1rem solid var(--clr-text2);
 }
 
 .experience-details {
@@ -599,7 +615,7 @@ section {
   justify-content: center;
   border-radius: 2rem;
   border: 0.1rem solid var(--clr-dark-grey);
-  background-color: var(--clr-white);
+  background-color: var(--clr-bg);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -758,10 +774,12 @@ footer > p {
     font-size: 3rem;
   }
 
-  #hero,
-  .section-container {
+  #hero {
     display: flex;
+    height: 90vh;
   }
+
+  #
 
   #about .section-container {
     flex-direction: column;
@@ -788,7 +806,6 @@ footer > p {
 
 @media screen and (min-width: 1400px) {
   #hero {
-    height: 96vh;
     margin-bottom: 1rem;
   }
 }
