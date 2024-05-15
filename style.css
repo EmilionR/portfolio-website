@@ -364,11 +364,9 @@ section {
 
 .title::after {
   content: "";
-  height: 40px;
   position: absolute;
   background-color: var(--clr-secondary);
-  left: -10%;
-  right: -10%;
+  inset: -5%;
   z-index: -1;
   border-radius: 12px;
   filter: blur(16px);
@@ -767,6 +765,10 @@ footer > p {
   #about .details-wrapper {
     gap: 2rem;
   }
+
+  i {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -777,9 +779,16 @@ footer > p {
   #hero {
     display: flex;
     height: 90vh;
-  }
+    gap: 4rem;
 
-  #
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 3rem;
+    }
+  }
 
   #about .section-container {
     flex-direction: column;
