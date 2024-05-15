@@ -303,6 +303,7 @@ section {
 
 #hero {
   display: block;
+  height: 90vh;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
