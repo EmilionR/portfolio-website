@@ -286,7 +286,7 @@ nav {
 /* ------------------------SECTIONS */
 
 section {
-  margin: 0 5% 2rem;
+  padding: 1rem;
   box-sizing: border-box;
   height: fit-content;
   min-height: fit-content;
@@ -313,6 +313,7 @@ section {
   height: 200px;
   margin: 0 auto 2rem;
   border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 .section__text {
@@ -369,10 +370,6 @@ section {
 
 /* -------------------ABOUT SECTION */
 
-#experience {
-  margin-bottom: 3rem;
-}
-
 .details-wrapper {
   gap: 2rem;
   margin-top: 0;
@@ -402,6 +399,10 @@ section {
 }
 
 /* ---------------EXPERIENCE SECTION */
+
+#experience {
+  background-color: var(--clr-secondary);
+}
 
 #experience .details-wrapper {
   flex-direction: column;
@@ -586,7 +587,6 @@ section {
   justify-content: center;
   flex-direction: column;
   height: 40vh;
-  margin-top: 2rem;
 }
 
 .contact-upper-container {
@@ -731,9 +731,6 @@ footer > p {
 }
 
 @media screen and (min-width: 992px) {
-  section {
-    margin: 0 10%;
-  }
 
   .burger-icon {
     display: none;
