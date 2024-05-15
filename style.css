@@ -377,7 +377,8 @@ section {
 }
 
 #about .details-wrapper {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1rem;
+  gap: 1rem;
 }
 
 .about-details {
@@ -386,7 +387,8 @@ section {
 }
 
 .text-container {
-  padding: 0 3rem 1rem;
+  padding: 0 1rem;
+  text-align: justify;
 }
 
 .details-container {
@@ -401,7 +403,7 @@ section {
 /* ---------------EXPERIENCE SECTION */
 
 #experience {
-  background-color: var(--clr-secondary);
+  padding: 1rem 0;
 }
 
 #experience .details-wrapper {
@@ -411,13 +413,16 @@ section {
 }
 .experience-subtitle {
   color: #444;
+  padding: 0.1rem 0.5rem;
   font-weight: 600;
   font-size: 1.25rem;
-  margin-left: 2.5rem;
+  margin-left: 5%;
   margin-bottom: -1.5rem;
   background-color: var(--clr-bg);
   z-index: 1;
   width: fit-content;
+  border-radius: 16px;
+  border: 0.1rem solid var(--clr-dark-grey);
 }
 
 .experience-details {
@@ -437,15 +442,17 @@ section {
   gap: 1rem;
   max-height: 40%;
   overflow-x: auto;
+  background-color: var(--clr-secondary);
 }
 
 .experience-block {
   padding: 1.5rem;
   font-size: 1rem;
   width: 30vw;
-  border: 0.1rem solid var(--clr-dark-grey);
-  border-radius: 12px;
-  background-color: var(--clr-light-grey);
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -678,10 +685,6 @@ footer > p {
     font-size: larger;
   }
 
-  .experience-subtitle {
-    font-size: 1.75rem;
-  }
-
   .logo {
     font-size: 2rem;
   }
@@ -748,6 +751,10 @@ footer > p {
 
   .details-container {
     padding: 1.5rem;
+  }
+
+  #about .details-wrapper {
+    gap: 2rem;
   }
 }
 
