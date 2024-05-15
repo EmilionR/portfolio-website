@@ -428,7 +428,6 @@ section {
 .experience-details {
   justify-content: center;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 #frontend-experience,
@@ -494,20 +493,19 @@ section {
 /* ----------------PROJECTS SECTION */
 
 #projects {
-  height: 96vh;
   overflow: hidden;
 }
 
 .carousel {
   position: relative;
-  perspective: 100px;
-  height: 80%;
+  height: 100vh;
   overflow-x: hidden;
-  padding: 1rem 0;
+  margin: 2rem 0;
 }
 
 .carousel__viewport {
   height: 100%;
+  width: 100%;
   display: flex;
   list-style: none;
   overflow: hidden;
@@ -516,6 +514,7 @@ section {
 .carousel__slide {
   flex: 0 0 auto;
   width: 100%;
+  height: 100%;
   max-width: 100%;
   list-style: none;
   transition: all 0.5s ease;
@@ -534,7 +533,6 @@ section {
   margin: 0;
   max-height: 100%;
   position: relative;
-  border-radius: 2rem;
 }
 
 .project-overlay {
@@ -715,10 +713,6 @@ footer > p {
     width: 10vw;
   }
 
-  .carousel {
-    padding: 2rem;
-  }
-
   .project-img {
     max-width: 100%;
     aspect-ratio: 16/9;
@@ -770,11 +764,6 @@ footer > p {
 
   #about .section-container {
     flex-direction: column;
-  }
-
-  section,
-  .section-container {
-    height: 83vh;
   }
 
   #profile-pic {
