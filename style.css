@@ -7,16 +7,18 @@
   --clr-grey: #888;
   --clr-light-grey: #ccc;
   --clr-primary: #7209b7;
-  --clr-secondary: #4361ee;
+  --clr-secondary: #43bbcc;
 
   --clr-bg: var(--clr-white);
   --clr-bg2: var(--clr-light-grey);
   --clr-text: var(--clr-black);
   --clr-text2: var(--clr-dark-grey);
+
+  --gradient: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {  
+  :root {
     --clr-bg: var(--clr-black);
     --clr-bg2: var(--clr-dark-grey);
     --clr-text: var(--clr-white);
@@ -286,7 +288,7 @@ nav {
 .burger-icon span {
   width: 100%;
   height: 2px;
-  background-color: var(--clr-black);
+  background-color: var(--clr-text);
   transition: all 300ms ease-in-out;
 }
 
@@ -308,6 +310,7 @@ section {
   height: fit-content;
   min-height: fit-content;
   position: relative;
+  overflow: hidden;
 }
 
 .section-container {
@@ -323,11 +326,43 @@ section {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  height: 90vh;
+  padding-top: 4rem;
+
+  .section-text {
+    margin-top: 5rem;
+  }
+
+  .btn-container {
+    margin-top: 5rem;
+  }
+}
+
+.background {
+  position: absolute;
+  top: -50%;
+  left: -32%;
+  width: 150%;
+  height: 120%;
+  z-index: -1;
+  background-image: var(--gradient);
+  background-size: 300%;
+  animation: bg-animation 4s infinite alternate;
+  transform: rotate(-10deg);
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 #profile-pic {
   width: 200px;
-  height: 200px;
+  aspect-ratio: 1/1;
   margin: 0 auto 2rem;
   border-radius: 50%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
@@ -368,7 +403,7 @@ section {
   background-color: var(--clr-secondary);
   inset: -5%;
   z-index: -1;
-  border-radius: 12px;
+  border-radius: 25%;
   filter: blur(16px);
 }
 
@@ -674,8 +709,7 @@ footer > p {
   }
 
   #profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 300px;
   }
 
   #contact {
@@ -743,7 +777,6 @@ footer > p {
 }
 
 @media screen and (min-width: 992px) {
-
   .burger-icon {
     display: none;
   }
@@ -788,6 +821,10 @@ footer > p {
     p {
       font-size: 3rem;
     }
+  }
+
+  #profile-pic {
+    width: 400px;
   }
 
   #about .section-container {
