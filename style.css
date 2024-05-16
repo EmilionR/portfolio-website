@@ -32,7 +32,7 @@
   margin: 0;
   padding: 0;
   /* outline: 1px solid #f00 !important; */
-}
+}g
 
 html {
   scroll-behavior: smooth;
@@ -41,6 +41,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--clr-bg);
+  overflow-x: hidden;g
 }
 
 h1,
